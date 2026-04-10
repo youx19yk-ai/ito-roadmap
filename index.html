@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社イト — 事業計画ロードマップ 2026-2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f0f0f;--paper:#f7f4ee;--accent:#1a6bff;--green:#00b87a;--orange:#f59e0b;--purple:#7c3aed;--red:#e63946;--muted:#888;--border:#d8d4cb;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--paper);color:var(--ink);font-family:'Noto Sans JP',sans-serif;font-size:14px;line-height:1.6;}
+.page{max-width:1120px;margin:0 auto;padding:56px 36px;}
+.header{display:grid;grid-template-columns:1fr auto;align-items:start;border-top:4px solid var(--ink);padding-top:20px;margin-bottom:72px;gap:24px;}
+.header-eyebrow{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+.header-title{font-size:clamp(30px,5vw,54px);font-weight:900;letter-spacing:-.04em;line-height:1.05;}
+.header-title em{color:var(--accent);font-style:normal;}
+.header-sub{font-size:13px;color:var(--muted);margin-top:10px;font-weight:300;}
+.meta-tag{display:inline-block;font-family:'Space Mono',monospace;font-size:11px;background:var(--ink);color:var(--paper);padding:6px 14px;letter-spacing:.08em;margin-bottom:8px;}
+.meta-members{font-size:12px;color:var(--muted);line-height:1.9;text-align:right;}
+.sec-label{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px;margin-bottom:28px;}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--border);}
+section{margin-bottom:80px;}
+.timeline{position:relative;}
+.tl-spine{position:absolute;left:110px;top:0;bottom:0;width:2px;background:var(--border);}
+.tl-item{display:grid;grid-template-columns:110px 1fr;gap:0 32px;position:relative;}
+.tl-date{text-align:right;padding-right:32px;padding-top:20px;}
+.tl-month{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;line-height:1;}
+.tl-year{font-size:10px;color:var(--muted);font-family:'Space Mono',monospace;}
+.tl-dot{position:absolute;left:104px;top:24px;width:14px;height:14px;border-radius:50%;border:2px solid var(--paper);z-index:2;}
+.tl-body{padding:16px 0 28px;border-bottom:1px solid var(--border);}
+.tl-item:last-child .tl-body{border-bottom:none;}
+.tl-tag{display:inline-block;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:2px;margin-bottom:8px;font-weight:700;}
+.tl-heading{font-size:16px;font-weight:700;margin-bottom:10px;line-height:1.3;}
+.tl-items{list-style:none;display:flex;flex-direction:column;gap:5px;}
+.tl-items li{font-size:13px;display:flex;align-items:flex-start;gap:8px;color:#333;}
+.tl-items li::before{content:'›';color:var(--muted);font-weight:700;flex-shrink:0;}
+.tl-kpi{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap;}
+.kpi-pill{font-family:'Space Mono',monospace;font-size:11px;padding:5px 12px;border-radius:2px;font-weight:700;border:1.5px solid;}
+.rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.rev-card{border:2px solid var(--ink);padding:28px;}
+.rev-year{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:4px;}
+.rev-card-title{font-size:17px;font-weight:900;margin-bottom:24px;letter-spacing:-.02em;}
+.rev-rows{display:flex;flex-direction:column;gap:14px;margin-bottom:24px;}
+.rev-row{display:flex;align-items:center;gap:12px;}
+.rev-label{font-size:12px;width:135px;flex-shrink:0;line-height:1.4;}
+.rev-bar-wrap{flex:1;height:22px;background:var(--border);border-radius:2px;overflow:hidden;}
+.rev-bar{height:100%;border-radius:2px;display:flex;align-items:center;padding-left:8px;font-size:10px;font-family:'Space Mono',monospace;font-weight:700;color:white;}
+.rev-val{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;width:72px;text-align:right;flex-shrink:0;}
+.rev-total{border-top:2px solid var(--ink);padding-top:16px;}
+.rev-total-label{font-size:12px;color:var(--muted);margin-bottom:2px;}
+.rev-total-num{font-size:28px;font-weight:900;letter-spacing:-.03em;}
+.rev-note{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6;}
+.cost-table{width:100%;border-collapse:collapse;border:2px solid var(--ink);}
+.cost-table th{background:var(--ink);color:var(--paper);font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:12px 16px;text-align:left;}
+.cost-table td{padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;}
+.cost-table tr:last-child td{border-bottom:none;}
+.cost-table .total-row td{background:#f0ede6;font-weight:700;border-top:2px solid var(--ink);}
+.note-sm{font-size:11px;color:var(--muted);}
+.warn{color:#b45309;font-size:11px;margin-top:3px;}
+.compare-wrap{overflow-x:auto;}
+.compare-table{width:100%;border-collapse:collapse;border:2px solid var(--ink);min-width:720px;}
+.compare-table th{padding:14px 16px;font-size:12px;font-weight:700;text-align:center;border-bottom:2px solid var(--ink);border-right:1px solid var(--border);}
+.compare-table th:last-child{border-right:none;}
+.compare-table th.ours{background:var(--accent);color:white;}
+.compare-table th.hd{background:#f0ede6;text-align:left;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;}
+.compare-table td{padding:12px 16px;font-size:13px;border-bottom:1px solid var(--border);border-right:1px solid var(--border);text-align:center;vertical-align:middle;}
+.compare-table td:last-child{border-right:none;}
+.compare-table td.row-hd{text-align:left;font-weight:700;font-size:12px;background:#f7f4ee;}
+.compare-table tr:last-child td{border-bottom:none;}
+.good{color:#00a855;font-weight:700;}.bad{color:#cc2200;font-weight:700;}.mid{color:#c07000;font-weight:700;}.dim{color:var(--muted);}
+.badge{display:inline-block;font-size:10px;font-family:'Space Mono',monospace;padding:3px 7px;border-radius:2px;font-weight:700;}
+.bg{background:#dcfce7;color:#166534;}.br{background:#fee2e2;color:#991b1b;}.by{background:#fef3c7;color:#92400e;}
+.action-list{border:2px solid var(--ink);}
+.action-item{display:grid;grid-template-columns:56px 1fr auto;align-items:center;padding:16px 20px;border-bottom:1px solid var(--border);gap:16px;}
+.action-item:last-child{border-bottom:none;}
+.action-n{font-family:'Space Mono',monospace;font-size:22px;font-weight:700;color:var(--border);}
+.action-body strong{display:block;font-size:14px;margin-bottom:2px;}
+.action-body span{font-size:12px;color:var(--muted);}
+.action-badge{font-family:'Space Mono',monospace;font-size:10px;padding:4px 10px;border-radius:2px;font-weight:700;white-space:nowrap;}
+.ab-now{background:var(--accent);color:white;}
+.ab-soon{background:var(--purple);color:white;}
+.ab-later{background:var(--border);color:var(--muted);}
+footer{border-top:2px solid var(--ink);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+footer p{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.08em;}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="header">
+  <div>
+    <div class="header-eyebrow">株式会社イト — 共同創業者向け事業計画書</div>
+    <h1 class="header-title">ビジネス<em>ロードマップ</em><br>2026–2027</h1>
+    <p class="header-sub">WEB制作 × SaaS × 決済手数料 — 三層収益モデル構築計画</p>
+  </div>
+  <div>
+    <div class="meta-tag">2026.04.10 策定</div>
+    <div class="meta-members">小林（東京 / 開発・経営）<br>中川（大阪 / 営業専任）<br>候補：西村、久山<br>※ 2名体制でスタート</div>
+  </div>
+</div>
+<section>
+  <div class="sec-label">01 — 実行タイムライン</div>
+  <div class="timeline">
+    <div class="tl-spine"></div>
+    <div class="tl-item">
+      <div class="tl-date"><div class="tl-month">APR</div><div class="tl-year">2026</div></div>
+      <div class="tl-dot" style="background:var(--accent);"></div>
+      <div class="tl-body">
+        <div class="tl-tag" style="background:#dbeafe;color:#1e40af;">法人設立フェーズ</div>
+        <div class="tl-heading">登記・基盤整備（小林単独）</div>
+        <ul class="tl-items">
+          <li>法人登記完了（株式会社イト）</li>
+          <li>バーチャルオフィス契約（大阪拠点）</li>
+          <li>HP制作用CMS 仕上げ・納品体制整備</li>
+          <li>PAY.JP Partner 登録申請（無料・3営業日審査）</li>
+          <li>税理士面談 → 役員報酬・消費税方式・業務委託設計を確定</li>
+        </ul>
+        <div class="tl-kpi"><div class="kpi-pill" style="border-color:var(--accent);color:var(--accent);">売上 ¥0（準備期）</div></div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date"><div class="tl-month">JUN</div><div class="tl-year">2026</div></div>
+      <div class="tl-dot" style="background:var(--green);"></div>
+      <div class="tl-body">
+        <div class="tl-tag" style="background:#dcfce7;color:#166534;">稼働開始</div>
+        <div class="tl-heading">中川合流 → アウトバウンド営業開始</div>
+        <ul class="tl-items">
+          <li>中川、大阪拠点で建設業向けHP営業スタート</li>
+          <li>メイン：建設業 ／ サブ：美容・サービス業</li>
+          <li>提案セット：HP制作 ＋ シャチPOS ＋ 決済手数料2.78%（PAY.JP経由）</li>
+          <li>シャチPOS PAY.JP決済フロー実装完了・デモ環境整備</li>
+        </ul>
+        <div class="tl-kpi"><div class="kpi-pill" style="border-color:var(--green);color:var(--green);">月次目標 受注2〜3件</div></div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date"><div class="tl-month">〜DEC</div><div class="tl-year">2026</div></div>
+      <div class="tl-dot" style="background:var(--orange);"></div>
+      <div class="tl-body">
+        <div class="tl-tag" style="background:#fef3c7;color:#92400e;">経営基盤構築</div>
+        <div class="tl-heading">設立年内：建設HP 15件・粗利1,350万円確保</div>
+        <ul class="tl-items">
+          <li>建設業HP 15件 × 平均粗利90万円 ＝ 1,350万円</li>
+          <li>サービス業向けシャチPOS 5〜10店舗導入目標</li>
+          <li>シャチPOS 顧客フィードバック反映・プロダクト磨き込み</li>
+          <li>導入事例をLP化・オーナー口コミ設計</li>
+          <li>法人内留保400万円以上を目標に税理士と調整</li>
+        </ul>
+        <div class="tl-kpi">
+          <div class="kpi-pill" style="border-color:var(--orange);color:var(--orange);">建設粗利 1,350万円</div>
+          <div class="kpi-pill" style="border-color:var(--orange);color:var(--orange);">SaaS 〜10万円/月</div>
+        </div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date"><div class="tl-month">2027</div><div class="tl-year">年間</div></div>
+      <div class="tl-dot" style="background:var(--purple);"></div>
+      <div class="tl-body">
+        <div class="tl-tag" style="background:#ede9fe;color:#4c1d95;">スケールフェーズ</div>
+        <div class="tl-heading">メンバー追加・美容飲食の実績拡大</div>
+        <ul class="tl-items">
+          <li>西村・久山 採用（担当領域TBD）</li>
+          <li>建設HP 年間50件体制（粗利4,500万円）</li>
+          <li>サービス業SaaS 30店舗到達目標</li>
+          <li>飲食店向けSaaS商材の構想・開発着手</li>
+          <li>エージェンシープラン（複数店舗一括管理）実装</li>
+        </ul>
+        <div class="tl-kpi">
+          <div class="kpi-pill" style="border-color:var(--purple);color:var(--purple);">建設粗利 4,500万円</div>
+          <div class="kpi-pill" style="border-color:var(--purple);color:var(--purple);">SaaS 360万円/年</div>
+        </div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date"><div class="tl-month">50店舗</div><div class="tl-year">到達時</div></div>
+      <div class="tl-dot" style="background:var(--red);"></div>
+      <div class="tl-body">
+        <div class="tl-tag" style="background:#fee2e2;color:#991b1b;">収益多層化</div>
+        <div class="tl-heading">GMO-PGと直接交渉 → 決済手数料収益化</div>
+        <ul class="tl-items">
+          <li>50店舗の取引量を交渉材料にGMO-PGと直接契約</li>
+          <li>手数料原価2.5%台に圧縮 → 差益0.3〜0.5%を収益化</li>
+          <li>月額SaaS × 手数料差益の二重収益構造完成</li>
+          <li>M&amp;A・外部資本調達も視野に</li>
+        </ul>
+        <div class="tl-kpi"><div class="kpi-pill" style="border-color:var(--red);color:var(--red);">手数料収益 約504万円/年（試算）</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="sec-label">02 — 収益モデルシミュレーション</div>
+  <div class="rev-grid">
+    <div class="rev-card">
+      <div class="rev-year">2026年（設立年 / 6〜12月稼働）</div>
+      <div class="rev-card-title">経営基盤構築フェーズ</div>
+      <div class="rev-rows">
+        <div class="rev-row"><div class="rev-label">建設HP制作<br><span style="font-size:10px;color:var(--muted);">15件 × 90万円</span></div><div class="rev-bar-wrap"><div class="rev-bar" style="width:96%;background:var(--ink);">主力収益</div></div><div class="rev-val">1,350万</div></div>
+        <div class="rev-row"><div class="rev-label">SaaS月額<br><span style="font-size:10px;color:var(--muted);">〜10店舗×1万</span></div><div class="rev-bar-wrap"><div class="rev-bar" style="width:5%;background:var(--accent);">▌</div></div><div class="rev-val">〜60万</div></div>
+      </div>
+      <div class="rev-total">
+        <div class="rev-total-label">年間粗利合計（概算）</div>
+        <div class="rev-total-num">約1,410万円</div>
+        <div class="rev-note">コスト概算：業務委託400万 ＋ 中川固定給245万（35万×7M）＋ 固定費100万 ＝ 745万円<br>税引前利益 約665万円 → 法人内留保400万円目標で役員報酬を設計</div>
+      </div>
+    </div>
+    <div class="rev-card">
+      <div class="rev-year">2027年（スケールフェーズ）</div>
+      <div class="rev-card-title">三層収益モデル完成形</div>
+      <div class="rev-rows">
+        <div class="rev-row"><div class="rev-label">建設HP制作<br><span style="font-size:10px;color:var(--muted);">50件 × 90万円</span></div><div class="rev-bar-wrap"><div class="rev-bar" style="width:85%;background:var(--ink);">主力収益</div></div><div class="rev-val">4,500万</div></div>
+        <div class="rev-row"><div class="rev-label">SaaS月額<br><span style="font-size:10px;color:var(--muted);">30店舗×1万×12M</span></div><div class="rev-bar-wrap"><div class="rev-bar" style="width:8%;background:var(--accent);">▌</div></div><div class="rev-val">360万</div></div>
+        <div class="rev-row"><div class="rev-label">決済手数料差益<br><span style="font-size:10px;color:var(--muted);">GMO直接契約後</span></div><div class="rev-bar-wrap"><div class="rev-bar" style="width:8%;background:var(--green);">▌</div></div><div class="rev-val">〜504万</div></div>
+      </div>
+      <div class="rev-total">
+        <div class="rev-total-label">年間粗利合計（概算）</div>
+        <div class="rev-total-num">約5,364万円</div>
+        <div class="rev-note">手数料試算：年商2,000万 × クレカ率30% × 30店舗 × 差益0.28% ≈ 504万円<br>※ GMO直接契約実現時の試算。PAY.JP継続の場合は手数料収益は発生しない</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="sec-label">03 — 2026年コスト構造（税理士確認前・参考値）</div>
+  <table class="cost-table">
+    <thead><tr><th style="width:30%">費目</th><th style="width:16%">金額（年）</th><th>備考・確認事項</th></tr></thead>
+    <tbody>
+      <tr><td>業務委託費</td><td>400万円</td><td><div class="note-sm">中川の彼女名義での支払いを想定</div><div class="warn">⚠ 実態を伴う業務設計が必須。税務調査で否認リスクあり → 税理士に要確認</div></td></tr>
+      <tr><td>中川 固定給</td><td>約245万円</td><td class="note-sm">35万円 × 7ヶ月（6〜12月）。雇用 or 業務委託の形態は税理士と要検討</td></tr>
+      <tr><td>小林 役員報酬</td><td>TBD</td><td class="note-sm">税理士面談で確定。消費税簡易課税の選択期限に注意（設立1期目）</td></tr>
+      <tr><td>固定費（オフィス・ツール等）</td><td>〜100万円</td><td class="note-sm">バーチャルオフィス・クラウドサービス・交通費・交際費等</td></tr>
+      <tr class="total-row"><td>合計コスト概算</td><td>〜745万円＋α</td><td class="note-sm">役員報酬確定後に再計算。留保400万目標との整合性を税理士と確認</td></tr>
+    </tbody>
+  </table>
+</section>
+<section>
+  <div class="sec-label">04 — 決済サービス競合比較</div>
+  <div class="compare-wrap">
+    <table class="compare-table">
+      <thead>
+        <tr><th class="hd">比較項目</th><th class="ours">シャチPOS＋PAY.JP Partner</th><th>Square</th><th>Airレジ＋Airペイ</th><th>Salon Board</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="row-hd">対面決済手数料</td><td><span class="good">2.78%</span><br><span style="font-size:11px;color:var(--muted);">Partner紹介で1年間</span></td><td><span class="mid">3.25%</span></td><td><span class="good">1.98%〜</span><br><span style="font-size:11px;color:var(--muted);">端末費・月額あり</span></td><td><span class="dim">非対応</span></td></tr>
+        <tr><td class="row-hd">月額費用（店舗側）</td><td><span class="good">¥10,000</span></td><td><span class="good">無料〜</span></td><td><span class="good">無料〜</span></td><td><span class="bad">¥20,000〜</span></td></tr>
+        <tr><td class="row-hd">予約管理</td><td><span class="badge bg">✓ 込み</span></td><td><span class="badge by">△ 別途</span></td><td><span class="badge bg">✓ 込み</span></td><td><span class="badge bg">✓ 強い</span></td></tr>
+        <tr><td class="row-hd">顧客カルテ</td><td><span class="badge bg">✓ あり</span></td><td><span class="badge br">✗ なし</span></td><td><span class="badge br">✗ なし</span></td><td><span class="badge bg">✓ あり</span></td></tr>
+        <tr><td class="row-hd">LINEリマインダー</td><td><span class="badge bg">✓ あり</span></td><td><span class="badge br">✗ なし</span></td><td><span class="badge by">△ 別途</span></td><td><span class="badge bg">✓ あり</span></td></tr>
+        <tr><td class="row-hd">HP制作との一体提案</td><td><span class="badge bg">✓ 唯一無二</span></td><td><span class="badge br">✗</span></td><td><span class="badge br">✗</span></td><td><span class="badge br">✗</span></td></tr>
+        <tr><td class="row-hd">導入コスト（顧客側）</td><td><span class="good">スマホ/タブレットのみ</span></td><td><span class="mid">端末購入必要</span></td><td><span class="mid">端末レンタル必要</span></td><td><span class="dim">ハード不要</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <div class="sec-label">05 — 優先アクションリスト</div>
+  <div class="action-list">
+    <div class="action-item"><div class="action-n">01</div><div class="action-body"><strong>税理士面談 — 役員報酬・消費税方式・業務委託設計を確定</strong><span>初年度設計が数年効く。簡易課税の選択期限、業務委託の実態設計は必須確認事項。</span></div><div class="action-badge ab-now">今週</div></div>
+    <div class="action-item"><div class="action-n">02</div><div class="action-body"><strong>PAY.JP Partner に登録申請</strong><span>フォーム5分・3営業日審査・ノルマなし・登録料なし。クーポンを営業トークに組み込む。</span></div><div class="action-badge ab-now">今週</div></div>
+    <div class="action-item"><div class="action-n">03</div><div class="action-body"><strong>シャチPOS に PAY.JP 決済フローを実装</strong><span>SDK は package.json に既に入り。対面・オンライン決済フローを6月合流前に完成。</span></div><div class="action-badge ab-now">4月中</div></div>
+    <div class="action-item"><div class="action-n">04</div><div class="action-body"><strong>中川向け営業資料作成（セット提案）</strong><span>「建設HP ＋ シャチPOS ＋ 決済2.78%」の一体提案資料。6月合流前に準備完了。</span></div><div class="action-badge ab-soon">5月</div></div>
+    <div class="action-item"><div class="action-n">05</div><div class="action-body"><strong>シャチPOS ダッシュボード・レジ締め画面を完成</strong><span>デモで見せる際に必須。顧客向けデモデータも充実させる。</span></div><div class="action-badge ab-soon">5月</div></div>
+    <div class="action-item"><div class="action-n">06</div><div class="action-body"><strong>西村・久山の採用タイミングと役割設計</strong><span>年末〜来年度の増員。担当領域（営業・開発・CS）を事前に設計しておく。</span></div><div class="action-badge ab-later">年末〜</div></div>
+    <div class="action-item"><div class="action-n">07</div><div class="action-body"><strong>飲食店向けSaaS商材の構想を開始</strong><span>2027年の第二の柱。シャチPOSのマルチテナント構造を活かして設計する。</span></div><div class="action-badge ab-later">2027〜</div></div>
+    <div class="action-item"><div class="action-n">08</div><div class="action-body"><strong>50店舗到達時にGMO-PGと直接交渉</strong><span>取引量が交渉材料。手数料原価2.5%台→差益0.3〜0.5%の収益化で三層モデル完成。</span></div><div class="action-badge ab-later">将来</div></div>
+  </div>
+</section>
+<footer>
+  <p>株式会社イト — BUSINESS ROADMAP v2 — 2026.04.10</p>
+  <p>CONFIDENTIAL — FOR CO-FOUNDER USE ONLY</p>
+</footer>
+</div>
+</body>
+</html>
